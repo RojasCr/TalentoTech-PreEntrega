@@ -1,9 +1,5 @@
 import process from "node:process"
-//import express from "express"
 
-/*const app = express();
-const PORT = 5000;
-*/
 const verb = process.argv[2]
 const url = "https://fakestoreapi.com/products/"
 
@@ -66,7 +62,7 @@ const deleteController = async () => {
     if(!id){
         return console.log("Debes ingresar un id");
     } 
-    
+
     const response = await fetch(url + id, {
         method
     });
@@ -87,5 +83,3 @@ switch(verb){
     break;
 
 }
-
-//console.log(verb)
